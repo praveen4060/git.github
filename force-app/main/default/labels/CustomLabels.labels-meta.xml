@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Conga_Application_Developer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Display text for Application Developer Contacts under a Account</shortDescription>
+        <value>Application Developer Contacts</value>
+    </labels>
+    <labels>
+        <fullName>Conga_Customer_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Display text for Customer Success Contacts under a Account</shortDescription>
+        <value>Customer Success Contacts</value>
+    </labels>
+    <labels>
+        <fullName>Conga_Total_Account_Contacts</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Display text for total Contacts under a Account</shortDescription>
+        <value>Total Number of Contacts</value>
+    </labels>
+</CustomLabels>

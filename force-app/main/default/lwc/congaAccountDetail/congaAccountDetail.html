@@ -1,0 +1,41 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Account Detail Section">
+        <div class="slds-form" role="list">
+            <lightning-layout multiple-rows>
+            <template for:each={recordToDisplay} for:item="eachField">
+                <lightning-layout-item key={eachField.label} size="6">
+            <div class="slds-form__row">
+                <div class="slds-form__item" role="listitem">
+                  <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_horizontal slds-hint-parent">
+                    <span class="slds-form-element__label">
+                        <strong>{eachField.label}</strong>
+                    </span>
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">
+                          {eachField.value}
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                </lightning-layout-item>
+          </template>
+          </lightning-layout>
+        </div>
+    </lightning-card>
+    <template if:true={customerSuccessContacts.length}>
+        <lightning-card  variant="Narrow"  title={customerSuccessTitle}>
+            <lightning-datatable key-field="Id" data={customerSuccessContacts} columns={dataTableColumns}
+            hide-checkbox-column show-row-number-column>
+         </lightning-datatable>
+        </lightning-card>
+    </template>
+    <template if:true={applicationDeveloperContacts.length}>
+        <lightning-card  variant="Narrow"  title={applicationDeveloperTitle}>
+            <lightning-datatable key-field="Id" data={applicationDeveloperContacts} columns={dataTableColumns} hide-checkbox-column
+            show-row-number-column>
+         </lightning-datatable>
+        </lightning-card>
+    </template>
+
+</template>
